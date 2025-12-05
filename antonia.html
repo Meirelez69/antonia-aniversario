@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário, Antônia!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #333;
+        }
+        
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+        
+        h1 {
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        
+        .heart {
+            font-size: 3em;
+            color: #e63946;
+        }
+        
+        button {
+            background-color: #e63946;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        
+        button:hover {
+            background-color: #d62828;
+        }
+        
+        .rotating-image {
+            display: none;
+            margin: 20px auto;
+            width: 150px;
+            height: 150px;
+            animation: spin 5s linear infinite;
+        }
+        
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        audio {
+            display: none;
+        }
+    </style>
+    <script>
+        function showSurprise() {
+            const image = document.querySelector('.rotating-image');
+            const audio = document.querySelector('audio');
+            image.style.display = 'block';
+            audio.style.display = 'block';
+            audio.play();
+            alert('Te amo muito, Antônia! 🎉');
+        }
+    </script>
+</head>
+
+<body>
+    <audio>
+        <source src="dame.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <div class="container">
+        <h1>Feliz Aniversário, Antônia! ❤️</h1>
+        <p>Hoje é um dia especial, pois celebramos o presente mais lindo que a vida me deu: você! Que seu dia seja repleto de alegria, amor e sorrisos. Obrigado por ser a pessoa incrível que ilumina minha vida todos os dias.</p>
+        <img src="antonia.png" alt="Imagem de Antônia" class="rotating-image">
+        <div class="heart">💖</div>
+        <button onclick="showSurprise()">Clique para uma surpresa!</button>
+    </div>
+</body>
+
+</html>
